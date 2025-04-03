@@ -9,11 +9,11 @@ public class BaseTest {
     private static WebDriver driver;
 
     public static void setup() {
-        if (driver == null) {  // Ensure driver is initialized only once
+        if (driver == null) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
             driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(Duration.ofMillis(3000)); // 3 seconds implicit wait
+            driver.manage().timeouts().implicitlyWait(Duration.ofMillis(3000));
         }
     }
 
@@ -26,7 +26,7 @@ public class BaseTest {
 
     public static WebDriver getDriver() { 
         if (driver == null) {
-            setup();  // Ensure setup is called before returning driver
+            setup();  // Ensures setup is called before returning driver
         }
         return driver;
     }
