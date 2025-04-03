@@ -10,4 +10,3 @@ Ensure the following are installed before running the tests:
 ## Running Tests Locally
 1. Add `@test` on top of the scenario to be executed.
 2. Run the following command: mvn test -Dcucumber.options="--tags @test"
-3. Reports can be found at: target/karate-reports/karate-summary.html
